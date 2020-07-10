@@ -28,4 +28,3 @@ printf "\e[1;93m[!] Download error... \e[0m\n"
 exit 1
 fi
 fi
-fi
