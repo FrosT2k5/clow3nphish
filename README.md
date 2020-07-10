@@ -19,4 +19,7 @@ cd clow3nphish
 
 python3 clow3nphish.py
 
+# Note
+If link is not generating in Termux then Turn on device hotspot & then run the tool
+
 # telegram grp:@offlicalClow3nSec
