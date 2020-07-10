@@ -114,7 +114,7 @@ def main():
             main()
 time.sleep(2)
 i = 0
-while(i != 5):
+while(i != 1):
     if os.path.exists("sites/%s/ip.txt" % server):
         os.system("cat sites/%s/ip.txt" % server)
         os.system("rm sites/%s/ip.txt" % server)
