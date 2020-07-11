@@ -11,13 +11,13 @@ federal laws. Developers assume no liability and are not
 responsible for any misuse or damage caused by this 
 program.
 # Usage
-git clone https://github.com/Clow3nSec/clow3nphish
+```apt install git python```
 
-apt install python
+```git clone https://github.com/Clow3nSec/clow3nphish```
 
-cd clow3nphish
+```cd clow3nphish```
 
-python3 clow3nphish.py
+```python3 clow3nphish.py```
 
 # Note
 If link is not generating in Termux then Turn on device hotspot & then run the tool
